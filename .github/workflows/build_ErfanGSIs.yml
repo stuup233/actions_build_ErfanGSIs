@@ -15,7 +15,7 @@ on:
     
 env:
   ROM_URL: http://download.h2os.com/OnePlus7Pro/MP/OnePlus7ProHydrogen_21.H.26_OTA_026_all_2005131910_126315831bb246d9.zip
-  ROM_NAME: oxygenOS
+  ROM_NAME: OxygenOS
   TZ: Asia/Shanghai
 
 jobs:
