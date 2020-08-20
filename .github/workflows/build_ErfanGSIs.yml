@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://hugeota.d.miui.com/20.8.13/miui_PYXIS_20.8.13_e67ee8c48b_10.0.zip
+  ROM_URL: https://hugeota.d.miui.com/20.6.18/miui_HMNote5_20.6.18_887af1fbe4_9.0.zip
   ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
@@ -42,7 +42,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/wwrrj/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/stuup/ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          run: |
@@ -51,7 +51,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME --ab
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME --aonly
        
        - name: Zip GSI  
          run: |
